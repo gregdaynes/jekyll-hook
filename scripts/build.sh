@@ -21,9 +21,10 @@ fi
 cd $source
 git checkout $branch
 git pull origin $branch
+
 cd -
 
 # Run jekyll
 cd $source
-jekyll $source $build --no-server --no-auto
+jekyll build --source $source --destination $build
 cd -
